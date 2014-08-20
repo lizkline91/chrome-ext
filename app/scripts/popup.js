@@ -1,24 +1,23 @@
 $(document).ready(function(){
 
-$.ajax({
+  $.ajax({
+    url:'http://www.reddit.com/r/CatsStandingUp.json',
+    mothod:'GET',
+    success:function (data){
+      var catUp = "<ul>"
+      for(var i = 0; i < 6; i++){
+        catUp +=
+          "<li>" + "<img src=\""
+          + data.data.children[i].data.thumbnail + "\">" + "</li>"
+      }
 
-url:'http://www.reddit.com/r/CatsStandingUp.json',
-type:'GET',
-success:function (data){
-// var reddit_pictures='<ol>'
-// for(var i = 1; i < 6; i++){
-//
-//   reddit_pictures += '<li><a href="' + data.data.children[i].data.url + '"><img src="' + data.data.children[i].data.thumbnail + '">'+ data.data.children[i].data.title + '</li>';
-// }
-// reddit_pictures += '</ol>';
-//
-// $('.cats').html(reddit_pictures);
+      catUp += '</ul>';
 
-console.log(data);
+      $(".cats").html(catUp);
+      console.log(data.data.children[i].data.thumbnail)
+    }
 
-}
-
-});
+  });
 
 
 });

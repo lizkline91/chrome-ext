@@ -4,3 +4,18 @@ html {
   /* Defaults css for cssmin process */
   background-color: transparent;
 }
+h1{
+  font: "arial-black";
+}
+.cats {
+  display: inline-block;
+
+
+    }
+.cats ul{
+    list-style:none;
+    padding:0;
+}
+.cats li{
+  float:left;
+}

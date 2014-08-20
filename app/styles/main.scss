@@ -1,6 +1,11 @@
 
 $default-background: grey;
 
-html {
-  background-color: $default-background;
+.cats {
+  display: inline-block;
+    ul{
+      list-style:none
+        
+    }
+
 }
